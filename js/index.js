@@ -66,6 +66,8 @@ function checkAnswer(currentLevel)
             $("body").removeClass("game-over")
         },100)
         $("h1").text("Game Over, Press Any Key to Restart")
+        var wrong = new Audio("sounds/wrong.mp3")
+        wrong.play()
         startOver()
     }
     
