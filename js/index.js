@@ -21,7 +21,7 @@ function animatePress(currentColor)
 
 }
 
-$("#level-title").click(function ()
+$(document).keydown(function ()
 {
     if (started != true)
     {
@@ -51,7 +51,11 @@ function checkAnswer(currentLevel)
         console.log("sucess")
 
         if (gamePattern.length == userClickedPattern.length)
-            setTimeout(nextSequence(), 100000)
+            setTimeout(function()
+            {
+            nextSequence()
+            }, 1000)
+            
     }
     else
     {
